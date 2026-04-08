@@ -432,6 +432,23 @@
             text-decoration: underline;
         }
 
+        .dev-signature {
+            margin-top: 20px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .dev-signature a {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .dev-signature a:hover {
+            color: #ff8c42;
+            text-decoration: underline;
+        }
+
         @media (max-width: 680px) {
             .hero h1 { font-size: 32px; }
             .products-grid { gap: 20px; }
@@ -466,6 +483,7 @@
         <button class="cat-btn" data-cat="shockers">Электрошокеры</button>
         <button class="cat-btn" data-cat="knives">Ножи</button>
         <button class="cat-btn" data-cat="pepper">Перцовые баллончики</button>
+        <button class="cat-btn" data-cat="sets">Наборы</button>
     </div>
 
     <div class="products-grid" id="productsGrid"></div>
@@ -477,6 +495,9 @@
         <div class="footer-links">
             <a href="https://t.me/nichegov1" target="_blank"><i class="fab fa-telegram"></i> Продавец: @nichegov1</a>
             <a href="https://t.me/pyshkarikk" target="_blank"><i class="fab fa-telegram"></i> Telegram канал</a>
+        </div>
+        <div class="dev-signature">
+            <a href="https://t.me/vcsax" target="_blank">Сайт сделан @vcsax</a>
         </div>
         <p style="margin-top: 16px; font-size: 12px;">По вопросам ассортимента и наличия (разные типы баллончиков, цвета, объёмы) — пишите в личные сообщения.</p>
     </div>
@@ -500,7 +521,7 @@
     (function() {
         const products = [
             { id: 1, name: "Сигнал охотника (пачка)", price: 1600, category: "signals", desc: "15 сигнальных патронов. Яркая вспышка (1 млн кд) и мощный хлопок (120 дБ). Высота подъема до 50 м.", img: "https://i.ibb.co/Lz5tFrf6/photo-4-2026-04-05-13-25-53.jpg" },
-            { id: 2, name: "Гром (пачка)", price: 1350, category: "signals", desc: "15 звуковых патронов. Звук до 160 дБ, искры и вспышка до 2.5 м. Для защиты от животных.", img: "https://i.ibb.co/jZ3LT6LV/photo-2-2026-04-05-13-25-53.jpg" },
+            { id: 2, name: "Гром (пачка)", price: 1400, category: "signals", desc: "15 звуковых патронов. Звук до 160 дБ, искры и вспышка до 2.5 м. Для защиты от животных.", img: "https://i.ibb.co/jZ3LT6LV/photo-2-2026-04-05-13-25-53.jpg" },
             { id: 3, name: "Сигнал охотника (1 шт)", price: 150, category: "signals", desc: "Одиночный резьбовой патрон. Время горения 3-5 сек, высота сигнала до 40 м.", img: "https://i.ibb.co/Lz5tFrf6/photo-4-2026-04-05-13-25-53.jpg" },
             { id: 4, name: "Гром (1 штука)", price: 130, category: "signals", desc: "Одиночный звуковой патрон. Громкий хлопок, искры до 30 см. Эффективно отпугивает.", img: "https://i.ibb.co/jZ3LT6LV/photo-2-2026-04-05-13-25-53.jpg" },
             { id: 5, name: "ПУ-1", price: 300, category: "launchers", desc: "Одноствольное пусковое устройство из пластика. Компактное, легкое.", img: "https://i.ibb.co/N2c51Fp8/photo-5-2026-04-05-13-24-53.jpg" },
@@ -511,7 +532,8 @@
             { id: 10, name: "Нож бабочка", price: 400, category: "knives", desc: "Острый.", img: "https://i.ibb.co/v6M9sttN/photo-1-2026-04-05-13-24-53.jpg" },
             { id: 11, name: "Перцовый баллон BlackX2 (75мл)", price: 750, category: "pepper", desc: "Есть разные вариации. Экстракт перца OC 95% + CS. Дальность до 2 м. Защита от случайного нажатия.", img: "https://i.ibb.co/k2864yZJ/photo-9-2026-04-05-13-24-53.jpg" },
             { id: 12, name: "Перцовый баллон Шпага (75мл)", price: 750, category: "pepper", desc: "Есть разные вариации, смесь OC+CS. Дальность до 3 м. Компактный вес 85 г.", img: "https://i.ibb.co/Nd71Yrsz/photo-10-2026-04-05-13-24-53.jpg" },
-            { id: 13, name: "Перцовый баллон Боец (100мл)", price: 1000, category: "pepper", desc: "Есть разные вариации, высокая ветроустойчивость. Дальность до 4 м.", img: "https://i.ibb.co/8gsPdb0X/photo-1-2026-04-05-13-25-53.jpg" }
+            { id: 13, name: "Перцовый баллон Боец (100мл)", price: 1000, category: "pepper", desc: "Есть разные вариации, высокая ветроустойчивость. Дальность до 4 м.", img: "https://i.ibb.co/8gsPdb0X/photo-1-2026-04-05-13-25-53.jpg" },
+            { id: 14, name: "Набор шестерка", price: 1050, category: "sets", desc: "состоит из: пу-1, 3 патрона гром, 3 патрона охотника", img: "https://i.ibb.co/ZzLb0X3g/image.png" }
         ];
 
         let cart = {};
